@@ -111,6 +111,9 @@
          fading edges is prohibitively expensive on most GPUs. -->
     <bool name="config_ui_enableFadingMarquee">false</bool>
 
+    <!-- Test -->
+    <bool name="config_activityThricePowerGestureEnabled">true</bool>
+
     <!-- Whether dialogs should close automatically when the user touches outside
          of them.  This should not normally be modified. -->
     <bool name="config_closeDialogWhenTouchOutside">true</bool>

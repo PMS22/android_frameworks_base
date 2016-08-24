@@ -2420,6 +2420,11 @@ public final class Settings {
          */
         public static final String SHOW_ALARM_ICON = "show_alarm_icon";
 
+	/**
+	 * @hide
+	 */
+	public  static final String THRICE_POWER_GESTURE = "thrice_power_gesture";
+
         /**
          * @hide
          */

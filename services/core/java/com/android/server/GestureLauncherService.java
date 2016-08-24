@@ -58,6 +58,12 @@ public class GestureLauncherService extends SystemService {
     private static final long CAMERA_POWER_DOUBLE_TAP_MAX_TIME_MS = 300;
     private static final long CAMERA_POWER_DOUBLE_TAP_MIN_TIME_MS = 120;
 
+    /**
+     * Thrice Power button ripple factor
+     * timing
+     */
+    private static final long ACTIVITY_THRICE_POWER_GESTURE = 450;
+
     /** The listener that receives the gesture event. */
     private final GestureEventListener mGestureListener = new GestureEventListener();
 
@@ -105,6 +111,11 @@ public class GestureLauncherService extends SystemService {
     private boolean mCameraDoubleTapPowerEnabled;
     private long mLastPowerDown;
 
+    /**
+     * Just to test
+     */
+    private boolean mActivityThricePowerGesture;
+
     public GestureLauncherService(Context context) {
         super(context);
         mContext = context;
@@ -128,6 +139,7 @@ public class GestureLauncherService extends SystemService {
                     "GestureLauncherService");
             updateCameraRegistered();
             updateCameraDoubleTapPowerEnabled();
+	    updateActivityThricePowerGesure();
 
             mUserId = ActivityManager.getCurrentUser();
             mContext.registerReceiver(mUserReceiver, new IntentFilter(Intent.ACTION_USER_SWITCHED));
